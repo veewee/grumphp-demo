@@ -1,0 +1,15 @@
+version: "3.4"
+services:
+    satis:
+        image: ypereirareis/docker-satis:3.4.0-debian-bullseye-php81-composer2
+        environment:
+            CRONTAB_FREQUENCY: -1
+        volumes:
+            - "/var/tmp/composer:/root/.composer"
+            - "~/.ssh/id_rsa:/var/tmp/id"
+            - "~/.ssh/config:/var/tmp/sshconf"
+            - "./satis.json:/app/config.json"
+            - "./satis.json:/satisfy/satis.json"
+        ports:
+            - 3333:3000
+            - 8000:80

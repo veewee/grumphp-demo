@@ -1,0 +1,32 @@
+{
+    "name": "veewee/grumphp-demo",
+    "description": "A small GrumPHP demo",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Veewee\\GrumphpDemo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Toon Verwerft",
+            "email": "toonverwerft@gmail.com"
+        }
+    ],
+    "require": {
+        "friendsofphp/php-cs-fixer": "^3.11"
+    },
+    "repositories": {
+        "packagist": false,
+        "0": {
+            "type": "composer",
+            "url": "http://127.0.0.1:8000"
+        }
+    },
+    "config": {
+        "secure-http": false
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
